@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>open when 💌</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      background: #FADADD;
+      font-family: 'Montserrat', sans-serif;
+      color: #6B4C4C;
+      cursor: url('https://cur.cursors-4u.net/nature/nat-10/nat972.cur'), auto;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .envelope {
+      background: #fff;
+      border: 2px solid #C6E2D9;
+      border-radius: 10px;
+      padding: 40px 20px;
+      text-align: center;
+      font-weight: 600;
+      font-size: 1.1em;
+      transition: transform 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      cursor: pointer;
+    }
+    .envelope:hover {
+      transform: scale(1.05);
+      background-color: #C6E2D9;
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 10;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.5);
+    }
+    .modal-content {
+  background-color: #fff;
+  margin: 5% auto;
+  padding: 30px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 600px;
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.4em;
+  color: #4B2E2E;
+  position: relative;
+  white-space: pre-wrap;
+  max-height: 80vh;          /* NEW: limits modal height */
+  overflow-y: auto;          /* NEW: adds vertical scroll if needed */
+}
+    }
+    .close {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      font-size: 1.5em;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Open When 💌</h1>
+<div class="grid">
+  <div class="envelope" onclick="openModal(0)">open when you're sad</div>
+  <div class="envelope" onclick="openModal(1)">open when you miss me</div>
+  <div class="envelope" onclick="openModal(2)">open when you're happy</div>
+  <div class="envelope" onclick="openModal(3)">open when you're stressed</div>
+  <div class="envelope" onclick="openModal(4)">open when you're thinking about our future</div>
+  <div class="envelope" onclick="openModal(5)">open when you feel insecure</div>
+  <div class="envelope" onclick="openModal(6)">open on our 200th day</div>
+</div>
+
+<!-- Modals -->
+<div class="modal" id="modal0">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal(0)">&times;</span>
+    my love, i don't know what made today heavier, but i do know that you don't have to carry it alone. i wish i could be there right now, arms wrapped around you, not needing to say a word, just holding u close to me until the sadness gets tired of fighting ur light. you're allowed to feel everything, even the ugly, the messy and confusing parts. i don't love an idealised perfect version of you, i love a real you. the one who hardly cries but who does sometimes for reasons she can't name. the one who fights her battles quietly but so fiercely. the one who's so soft yet so strong all at once. i love you, not just when you seem brighter than the sun, but in your shadows too. and if the world gets too loud, too cruel, too much - let it be all that while holding my hand. i'm proud of the heart you carry, even when it's tired. i'm here. breathe. feel what u need to feel. i love you.
+  </div>
+</div>
+
+<div class="modal" id="modal1">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal(1)">&times;</span>
+    hi baby. so i heard u miss me. guess what, i miss you so much too. more than i can explain in a simple letter, more than words can ever get right. if i could i would just teleport to where u are right now. i'd hold your face in my hands gently, kiss you all over, and tell you that us missing each other is just another proof of how real this is. what we have is so so rare, so unique and so worth every mile and every moment apart. but still, i know it hurts. i want you to know that in those moments, i'm with you. maybe not in the way we dream of yet. but in every song that reminds you of us. in every memory that brings a soft smile on your pretty face. in every deep breath that steadies your chest when it gets a lot. i love you in the quiet, i love you across time and space, and we'll be back in each others arms before we know it. until then, keep me in your heart, because i never left.
+  </div>
+</div>
+
+<div class="modal" id="modal2">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal(2)">&times;</span>
+    hi my baby. look at you, smiling, laughing and probably glowing so beautifully without even trying. god how much i love you. not just because you're happy, but because you let yourself be. you deserve this lightness, this freedom to just be. it's like you're in sunlight rn, and baby, you deserve every golden second. you being happy makes me so happy, like the world's suddenly just a little softer, a little brighter. if i'm not with you now, know that i'm smiling too just thinking of you. i love you on your stormiest days, and i love you when you shine so bright.
+  </div>
+</div>
+
+<div class="modal" id="modal3">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal(3)">&times;</span>
+    hi baby. i can feel it even from here, the tension you hold, how everything feels urgent and heavy all at once rn. i wish i could pull you into my arms right now and just make you listen to my heartbeat. baby, you don't have to have everything figured out. you're allowed to pause, to break things down into pieces, to take it all one tiny moment at a time. i know you always put a lot of pressure on yourself, to do everything right, to not let anyone down, to stay strong. but even the strongest hearts need rest and even the brightest minds need silence sometimes. no matter how chaotic it gets, you're not failing. you're trying, you're not behind, you're human. and i'm so proud of you. take a breath, drink some water, unclench your jaw. you've got this. and i've got you. i'll be your calm in the storm.
+  </div>
+</div>
+
+<div class="modal" id="modal4">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal(4)">&times;</span>
+    love of my life, i know where your mind is right now. tangled in the "what ifs", the expectations, the weight of everything we didn't choose but still have to carry. and i hate that you have to think about love like it could become a war. truth is, i don't have all the answers. i can't predict what's coming or how everything will unfold. but i can tell you that i'm never going anywhere. i chose you, not just when it was easy, not just when it felt like a dream. i chose you knowing this might be messy, knowing it's uncertain. but what we have is worth fighting for. even if we have to hold onto each other quietly, carefully. even if we cry some nights and whisper plans into the dark like they're prayers to the universe. baby, you're never alone in this. it's us. and no matter how things twist or turn, we'll find a way, i promise. i'll keep choosing you, again and again. i see your heart, how it tries to carry both love and a sense of duty, and i love you even more for it. no matter what the world expects, i'll always choose us. i'm yours, in every version of the future.
+  </div>
+</div>
+
+<div class="modal" id="modal5">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal(5)">&times;</span>
+    my nitya. i know. i know today something made you forget your worth. maybe a comment, a memory, a voice in your head that doesn't sound like mine. so let me remind you: you are more than enough. not when you change, not when you fix something, not when you meet someone else's idea of perfect. right now, as you are. i see you baby, all of you, and i love you. not in a distant superficial way. in a raw, soul-deep way. your soft heart, your fire, your fears, the way you overthink but still love so hard anyway... every bit of you is magic to me. when you feel small, remember that someone (me) looks at you and sees the whole fucking universe. your body, your mind, your soul, none of it is up for comparison. they're yours and they're so beautiful. so be gentle with yourself my love. come back to yourself, and come back to me. i'll be here reminding you of who you are, until you believe it.
+  </div>
+</div>
+
+<div class="modal" id="modal6">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal(6)">&times;</span>
+    200 days. can you believe it? 200 days of love, laughter, late night talks, missing each other, holding on and choosing us. it's so crazy how something that started as a familiar spark has grown into this, something so deep, something i can't imagine my life without. some days have been soft and easy, others messy and uncertain. but every single day i've been grateful. grateful that it's you. you've taught me things no one else ever could. about patience, honesty, and how strong love has to be when the world makes it complicated. i look at you and i see everything i want to fight for, and i know who i want beside me for every version of the future. you. so here's to 200 days. here's to the stolen kisses. to the unspoken understanding. to every quiet "i love you" late at night. and here's to the days ahead, the unknown, the imperfect and the beautiful. as long as you're in them, i'm home. thank you for loving me the way you do. yours for the next 200 and beyond.
+  </div>
+</div>
+
+<script>
+  function openModal(index) {
+    document.getElementById(`modal${index}`).style.display = 'block';
+  }
+  function closeModal(index) {
+    document.getElementById(`modal${index}`).style.display = 'none';
+  }
+  window.onclick = function(event) {
+    for (let i = 0; i < 7; i++) {
+      const modal = document.getElementById(`modal${i}`);
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  }
+</script>
+
+</body>
+</html>
