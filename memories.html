@@ -24,17 +24,33 @@
       max-width: 1000px;
       margin: 0 auto;
     }
-    .photo {
-      background: #fff;
-      border-radius: 12px;
-      padding: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-    .photo img {
-      width: 100%;
-      height: auto;
-      border-radius: 10px;
-    }
+.photo {
+  background: #fff;
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  position: relative;
+  overflow: hidden;
+  height: 250px; /* fixed height so layout stays consistent */
+}
+
+.photo img {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+  object-fit: cover;
+  border-radius: 10px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.photo:hover img {
+  opacity: 1;
+}
     .caption {
       margin-top: 10px;
       font-weight: 500;
@@ -54,6 +70,23 @@
     a:hover {
       background-color: #b0d3c8;
     }
+    .button-link {
+  display: inline-block;
+  margin-top: 40px;
+  padding: 12px 25px;
+  background-color: #fff;
+  color: #6B4C4C;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 1.1em;
+  text-decoration: none;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+.button-link:hover {
+  background-color: #C6E2D9;
+  transform: scale(1.05);
+}
   </style>
 </head>
 <body>
@@ -83,7 +116,7 @@
   </div>
 </div>
 
-    <a href="soundtrack.html"><button class="btn">the soundtrack of us.</button></a>
+<a href="soundtrack.html" class="button-link">the soundtrack of us</a>
 
 </body>
 </html>
